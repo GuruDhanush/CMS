@@ -1,6 +1,10 @@
 package com.BlanC;
+import com.csvreader.*;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
 /**
@@ -25,15 +29,7 @@ public class Farmer
         }
 
 
-        public void Entry() throws IOException
-        {
-            PrintWriter PW = new PrintWriter("Ryot.csv");
-            PW.print("Name "); PW.println("RollNum");
-            PW.print("Dhanush "); PW.println(123);
-            PW.print("Guru "); PW.println(456);
-            PW.print("QWERTY "); PW.println(567);
 
-            PW.close();
         }
-    }
+
 
