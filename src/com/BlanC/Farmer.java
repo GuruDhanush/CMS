@@ -28,6 +28,7 @@ public class Farmer extends Person
 
     }
 
+    //we will get the data from extending
     /*public String Division;
     public String Sector;
     public String Village; */
