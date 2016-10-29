@@ -1,8 +1,10 @@
 package com.BlanC;
 
+import com.csvreader.CsvReader;
 import com.csvreader.CsvWriter;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -13,8 +15,10 @@ public class Main
     {
 	// write your code here
         System.out.print("hi");
-        Farmer ft = new Farmer();
-        Entry();
+        Farmer ft = new Farmer("a","b",123, "afs");
+        System.out.println(ft.Name + ft.SurName + ft.RyotCode + ft.Address);
+
+       // Entry();
     }
 
     public static void Entry() throws IOException {
@@ -52,7 +56,7 @@ public class Main
         cw.close();
 
         //Some problem in reading a file, showing FileNotFound exception
-            /*
+
             try {
                 CsvReader cr = new CsvReader("Farmers.csv");
                 System.out.println(cr.get("Name"));
@@ -61,7 +65,7 @@ public class Main
             {
                 fe.printStackTrace();
 
-            } */
+            }
 
 
     }
