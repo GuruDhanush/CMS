@@ -25,7 +25,7 @@ public class Farmer extends Person
 
     public Farmer()
     {
-
+        //default constructor
     }
 
     //we will get the data from extending
