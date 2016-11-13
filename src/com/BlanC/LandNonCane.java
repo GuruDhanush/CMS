@@ -5,5 +5,5 @@ package com.BlanC;
  */
 public class LandNonCane
 {
-    //added a new
+    //added a new //
 }

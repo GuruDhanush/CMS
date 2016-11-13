@@ -1,6 +1,5 @@
 package com.BlanC;
 import com.BlanC.Check;
-import com.csvreader.*;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -49,7 +48,7 @@ public class Farmer extends Person
     }
 
 
-    private static String types[] = {"Small","Medium","Large"};
+    private static String ftypes[] = {"Small","Medium","Large"};
     private static  String cat[] = {"O.C","B.C","S.C","S.T"};
     private static String watersourc[] = {"Bore Well", "Open Well", "Canal"};
     private static String soils[] = {"Black", "Red", "Sandy"};
@@ -61,7 +60,7 @@ public class Farmer extends Person
     private String Ryotclass;
     public void SetRyotClass(String ryotclass)
     {
-        if(Check.checklist(ryotclass,types))
+        if(Check.checklist(ryotclass,ftypes))
         {
             this.Ryotclass = ryotclass;
         }

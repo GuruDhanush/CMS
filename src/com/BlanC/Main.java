@@ -1,7 +1,5 @@
 package com.BlanC;
 
-import com.csvreader.CsvReader;
-import com.csvreader.CsvWriter;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -21,17 +19,17 @@ public class Main
        // Entry();
     }
 
-    public static void Entry() throws IOException {
-           /* PrintWriter PW = new PrintWriter("Farmer.csv");
+ /*   public static void Entry() throws IOException {
+           PrintWriter PW = new PrintWriter("Farmer.csv");
             PW.print("Name "); PW.println("RollNum");
             PW.print("Dhanush "); PW.println(123);
             PW.print("Guru "); PW.println(456);
             PW.print("QWERTY "); PW.println(567);
 
-            PW.close(); */
+            PW.close();
 
         File fs = new File("Farmer.csv");
-        CsvWriter cw = new CsvWriter(new FileWriter("Farmer.csv",true),',');
+   CsvWriter cw = new CsvWriter(new FileWriter("Farmer.csv",true),',');
 
         //Writing Headers
         cw.write("Name");
@@ -65,8 +63,8 @@ public class Main
             {
                 fe.printStackTrace();
 
-            }
+            }*/
 
 
     }
-}
+
