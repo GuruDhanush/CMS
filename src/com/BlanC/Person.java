@@ -1,7 +1,7 @@
 package com.BlanC;
 
 /**
- * Created by Administrator on 30-10-2016.
+ * Created by Guru on 30-10-2016.
  */
 
 public class Person

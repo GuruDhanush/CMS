@@ -9,7 +9,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 
 /**
- * Created by Administrator on 29-10-2016.
+ * Created by Guru on 29-10-2016.
  */
 
 public class Farmer extends Person
@@ -36,13 +36,46 @@ public class Farmer extends Person
 
 
     public long RyotCode;
-    public String AreaType;
+
+    private String AreaType;
+    public String GetAreaType()
+    {
+        return this.AreaType;
+    }
+    public void SetReturnType(String areatype)
+    {
+        //ask father
+    }
+
+
+
     public String NativeBranch;
     public ArrayList<Farmer> Surety;
     public Person Nominee;
-    public String Ryotclass;
+
+    private String Ryotclass;
+
+    public void SetRyotClass(String ryotclass, String[])
+    public String GetRyotClass() {return this.Ryotclass;}
+
+
     public String Category;
+    public void SetCategory(String category)
+    {
+
+        for(String categor : cat)
+        {
+            if(category.trim().equals(categor))
+            {
+                this.Category = category;
+            }
+        }
+    }
+    public String getCategory() {return this.Category;}
+
     public String WaterSources;
+
+
     public String SoilType;
 
 
