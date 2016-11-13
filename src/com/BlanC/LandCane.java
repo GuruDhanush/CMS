@@ -7,7 +7,7 @@ import java.sql.Date;
  */
 public class LandCane
 {
-    private String Plant,
+    private String Plant;
     private Date Season ;
     private String SectionName;
     private String Village;
