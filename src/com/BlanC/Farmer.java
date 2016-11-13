@@ -1,4 +1,5 @@
 package com.BlanC;
+import com.BlanC.Check;
 import com.csvreader.*;
 
 import java.io.File;
@@ -48,35 +49,59 @@ public class Farmer extends Person
     }
 
 
+    private static String types[] = {"Small","Medium","Large"};
+    private static  String cat[] = {"O.C","B.C","S.C","S.T"};
+    private static String watersourc[] = {"Bore Well", "Open Well", "Canal"};
+    private static String soils[] = {"Black", "Red", "Sandy"};
 
     public String NativeBranch;
     public ArrayList<Farmer> Surety;
     public Person Nominee;
 
     private String Ryotclass;
-
-    public void SetRyotClass(String ryotclass, String[])
+    public void SetRyotClass(String ryotclass)
+    {
+        if(Check.checklist(ryotclass,types))
+        {
+            this.Ryotclass = ryotclass;
+        }
+    }
     public String GetRyotClass() {return this.Ryotclass;}
 
 
-    public String Category;
+    private String Category;
     public void SetCategory(String category)
     {
-
-        for(String categor : cat)
+        if(Check.checklist(category,cat))
         {
-            if(category.trim().equals(categor))
-            {
-                this.Category = category;
-            }
+            this.Category = category;
         }
     }
     public String getCategory() {return this.Category;}
 
+
     public String WaterSources;
+    public void SetWaterSources(String watersources)
+    {
+        if(Check.checklist(watersources,watersourc))
+        {
+            this.WaterSources = watersources;
+        }
+    }
+    public String GetWaterSources() {return this.WaterSources;}
+
 
 
     public String SoilType;
+    public void SetSoilType(String soil)
+    {
+        if(Check.checklist(soil,soils))
+        {
+            this.SoilType = soil;
+        }
+    }
+    public String GetSoilType() {return this.SoilType;}
+
 
 
 

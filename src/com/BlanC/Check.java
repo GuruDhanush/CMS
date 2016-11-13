@@ -9,6 +9,7 @@ import java.io.PrintWriter;
  */
 public  class Check
 {
+
     File f = new File("Errors.txt");;
 
     public boolean CheckName(String name) throws IllegalArgumentException,IOException
@@ -49,7 +50,7 @@ public  class Check
 
     }
 
-    public boolean checklist(String item, String[] category)   //for predefined list objects
+    public static boolean checklist(String item, String[] category)   //for predefined list objects
     {
         boolean check = false;
 
