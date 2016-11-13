@@ -53,19 +53,10 @@ public class Farmer extends Person
     private static String watersourc[] = {"Bore Well", "Open Well", "Canal"};
     private static String soils[] = {"Black", "Red", "Sandy"};
 
-    public String NativeBranch;
+    //public String NativeBranch;
     public ArrayList<Farmer> Surety;
     public Person Nominee;
 
-    private String Ryotclass;
-    public void SetRyotClass(String ryotclass)
-    {
-        if(Check.checklist(ryotclass,ftypes))
-        {
-            this.Ryotclass = ryotclass;
-        }
-    }
-    public String GetRyotClass() {return this.Ryotclass;}
 
 
     private String Category;

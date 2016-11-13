@@ -10,9 +10,9 @@ import java.io.PrintWriter;
 public  class Check
 {
 
-    File f = new File("Errors.txt");;
+    //File f = new File("Errors.txt");
 
-    public boolean CheckName(String name) throws IllegalArgumentException,IOException
+    public static boolean CheckString(String name) throws IllegalArgumentException,IOException
     {
         boolean error = false;
 
@@ -32,16 +32,18 @@ public  class Check
         catch(IllegalArgumentException ie)
         {
 
-            PrintWriter output = new PrintWriter(f);
+            ie.printStackTrace();
+           /* PrintWriter output = new PrintWriter(f);
             output.print(ie.getMessage());
-            error = true;
+            error = true; */
 
         }
         catch (Exception e)
         {
-            PrintWriter output = new PrintWriter(f);
+           /* PrintWriter output = new PrintWriter(f);
             output.print(e.getMessage());
-            error = true;
+            error = true; */
+           e.printStackTrace();
         }
 
         return !error;
@@ -67,17 +69,36 @@ public  class Check
 
     }
 
-    public Boolean isType(String Str, String type) {
-        try {
-            if (type.equalsIgnoreCase("float")) {
-                Float.parseFloat(Str);
-            } else if (type.equalsIgnoreCase("int")) {
-                Integer.parseInt(Str);
-            } else if (type.equalsIgnoreCase("double")) {
-                Double.parseDouble(Str);
+    //public
+
+
+    public static Boolean isType(String str, String type)
+    {
+        try
+        {
+            if(type.equalsIgnoreCase("float"))
+            {
+                Float.parseFloat(str);
+            }
+            else
+            if(type.equalsIgnoreCase("int"))
+            {
+                Integer.parseInt(str);
+            }
+            else
+            if(type.equalsIgnoreCase("double"))
+            {
+                Double.parseDouble(str);
+            }
+            else
+            if(type.equalsIgnoreCase("long"))
+            {
+                Long.parseLong(str);
             }
             return true;
-        } catch(Exception e) {
+        }
+        catch(Exception e)
+        {
             return false;
         }
 
