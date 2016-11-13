@@ -80,7 +80,7 @@ public class Farmer extends Person
     public String getCategory() {return this.Category;}
 
 
-    public String WaterSources;
+    private String WaterSources;
     public void SetWaterSources(String watersources)
     {
         if(Check.checklist(watersources,watersourc))
@@ -92,7 +92,7 @@ public class Farmer extends Person
 
 
 
-    public String SoilType;
+    private String SoilType;
     public void SetSoilType(String soil)
     {
         if(Check.checklist(soil,soils))
