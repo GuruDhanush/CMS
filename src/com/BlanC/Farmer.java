@@ -15,12 +15,12 @@ import java.util.ArrayList;
 public class Farmer extends Person
 {
 
-    public Farmer(String FName, String SurName, int ryotcode, String address)
+    public Farmer(String FName, String SurName, String address)
     {
         super(FName,SurName,address);
         //this.Name = FName;
         //this.SurName = SurName;
-        this.RyotCode = ryotcode;
+       // this.RyotCode = ryotcode;
     }
 
     public Farmer()
@@ -35,7 +35,12 @@ public class Farmer extends Person
 
 
 
+
     public long RyotCode;
+    public void SetRyotCode(String ryotcode)
+    {
+
+    }
 
     private String AreaType;
     public String GetAreaType()
@@ -53,19 +58,10 @@ public class Farmer extends Person
     private static String watersourc[] = {"Bore Well", "Open Well", "Canal"};
     private static String soils[] = {"Black", "Red", "Sandy"};
 
-    public String NativeBranch;
+    //public String NativeBranch;
     public ArrayList<Farmer> Surety;
     public Person Nominee;
 
-    private String Ryotclass;
-    public void SetRyotClass(String ryotclass)
-    {
-        if(Check.checklist(ryotclass,ftypes))
-        {
-            this.Ryotclass = ryotclass;
-        }
-    }
-    public String GetRyotClass() {return this.Ryotclass;}
 
 
     private String Category;

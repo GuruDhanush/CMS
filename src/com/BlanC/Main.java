@@ -13,8 +13,8 @@ public class Main
     {
 	// write your code here
         System.out.print("hi");
-        Farmer ft = new Farmer("a","b",123, "afs");
-        System.out.println(ft.Name + ft.SurName + ft.RyotCode + ft.Address);
+        Farmer ft = new Farmer("a","b","afs");
+        System.out.println(ft.GetName() + ft.GetSurName() + ft.GetAddress());
 
        // Entry();
     }
